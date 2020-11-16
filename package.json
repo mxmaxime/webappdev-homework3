@@ -1,0 +1,22 @@
+{
+  "name": "wad20-homework2-solution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxmaxime/wad20-homework2-solution.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mxmaxime/wad20-homework2-solution/issues"
+  },
+  "homepage": "https://github.com/mxmaxime/wad20-homework2-solution#readme",
+  "dependencies": {
+    "vue-cli": "^2.9.6"
+  }
+}
