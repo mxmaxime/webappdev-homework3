@@ -1,11 +1,35 @@
 import Vue from 'vue'
-import App from './App.vue'
+// import App from './App.vue'
+import Browse from './components/Browse.vue';
+import Login from './components/Login.vue';
+import Index from './components/Index.vue';
 
 Vue.config.productionTip = false
 
+// new Vue({
+//   render: h => h(App),
+// }).$mount('#app')
+
+// In case of 404
+const NotFound = { template: '<h1>Page not found</h1>' }
+const routes = {
+  '/': Login,
+  '/browse': Browse,
+  '/index' : Index
+}
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',
+  data: {
+    currentRoute: window.location.pathname
+  },
+  computed: {
+    ViewComponent () {
+      return routes[this.currentRoute] || NotFound
+    }
+  },
+  render (h) { return h(this.ViewComponent) }
+})
+
 // main.js
 
 // import Vue from 'vue';

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- TODO ROUTER -->
-      <Login />
+      <!-- <Login /> -->
   </div>
 </template>
 
