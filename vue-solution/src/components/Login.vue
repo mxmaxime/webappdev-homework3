@@ -305,7 +305,7 @@ nav div.avatar-container {
 }
 
 .profile {
-    min-width: 300px;
+    min-width: 200px;
     margin: 15px auto;
     box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
     border-radius: 5px;

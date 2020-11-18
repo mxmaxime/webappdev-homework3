@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Browse from './components/Browse.vue';
 import Login from './components/Login.vue';
 import Index from './components/Index.vue';
-
+import store from './store'
 Vue.config.productionTip = false
 
 // new Vue({
@@ -27,6 +27,7 @@ new Vue({
       return routes[this.currentRoute] || NotFound
     }
   },
+  store,
   render (h) { return h(this.ViewComponent) }
 })
 
