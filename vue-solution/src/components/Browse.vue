@@ -27,7 +27,7 @@
         </div>
       </nav>
     </header>
-    <h1 v-if="error"> ERROR </h1>
+    <h1 v-if="error">ERROR</h1>
     <section v-else class="main-container-browse">
       <div class="profile" v-for="profile in profiles" :key="profile.id">
         <div class="profile-avatar-container">
@@ -37,8 +37,12 @@
           <h3>{{ profile.firstname }} {{ profile.lastname }}</h3>
         </div>
         <div class="profile-actions">
-          <button type="button" name="follow" v-class="follow-button"
-            @click="clickFollowButton">
+          <button
+            type="button"
+            name="follow"
+            class="follow-button"
+            @click="clickFollowButton"
+          >
             Follow
           </button>
         </div>
@@ -48,35 +52,45 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "Browse",
   data() {
     return {
+      // False if the profiles fetching request has finished
       loading: true,
       profiles: null,
-      error : false
+
+      // True if the profiles fetching request fails
+      error: false,
     };
   },
   methods: {
-    clickFollowButton: function() {
-
-    }
+    /** Toggle style + change text */
+    clickFollowButton: function (e) {
+      e.target.classList.toggle("followed");
+      if (e.target.innerHTML == "Followed") {
+        e.target.innerHTML = "Follow";
+      } else {
+        e.target.innerHTML = "Followed";
+      }
+    },
   },
   mounted() {
-    const URL_WS = "https://private-anon-7f820c5d58-wad20postit.apiary-mock.com/profiles"
+    const URL_WS =
+      "https://private-anon-7f820c5d58-wad20postit.apiary-mock.com/profiles";
 
-    // Get all profiles
+    // Get all profiles from API
     axios
       .get(URL_WS)
-      .then(response => {
-        this.profiles = response.data
+      .then((response) => {
+        this.profiles = response.data;
       })
-      .catch(error => {
-        console.log(error)
-        this.error = true
+      .catch((error) => {
+        console.log(error);
+        this.error = true;
       })
-      .finally(() => this.loading = false)
+      .finally(() => (this.loading = false));
   },
 };
 </script>

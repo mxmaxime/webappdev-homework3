@@ -1,3 +1,13 @@
+
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+/**************** DEPRECATED DO NO USE THIS FILE */
+
 // import dependency to handle HTTP request to our back end
 import axios from 'axios'
 import Vuex from 'vuex'
