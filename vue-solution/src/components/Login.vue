@@ -14,7 +14,7 @@
         </div>
         <div>
           <h3>Please Log In</h3>
-          <form action="index.html" method="post">
+          <form action="/index">
             <div>
               <input type="text" name="email" placeholder="Email">
             </div>
@@ -169,7 +169,6 @@ nav div.avatar-container {
     top: 50px;	
     height: auto!important;	
     padding: 0;	
-    visibility: hidden;	
 }	
 
 .dropdown.visible {	
@@ -305,12 +304,19 @@ nav div.avatar-container {
 }
 
 .profile {
-    min-width: 200px;
-    margin: 15px auto;
+    width: 45%;
+    display: inline-block;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    text-align: center;
+    margin: 1%;
+
+    /* min-width: 200px; */
+    /* margin: 15px auto;
     box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
     border-radius: 5px;
     /* text-align:center; */
-    padding: 20px;
+    /*padding: 20px; */
 }
 
 .profile .profile-name{

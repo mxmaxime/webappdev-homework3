@@ -151,7 +151,7 @@ nav div.avatar-container {
     top: 50px;	
     height: auto!important;	
     padding: 0;	
-    visibility: hidden;	
+    /* visibility: hidden;	 */
 }	
 
 .dropdown.visible {	
